@@ -68,13 +68,13 @@ function calculateWeight() {
         switch (sectionType) {
             case "Steel Plates and Sheets":
                 const [lengthPlate, widthPlate, thicknessPlate] = values;
-                weight = (lengthPlate / 1000) * (widthPlate / 1000) * (thicknessPlate / 1000) * (density/1000); // Convert mm to m
+                weight = (lengthPlate / 1000) * (widthPlate / 1000) * (thicknessPlate / 1000) * density; // Convert mm to m
                 break;
 
             case "Chequered Steel Plates":
                 const [lengthCheq, widthCheq, thicknessCheq] = values;
                 const adjustedThickness = (thicknessCheq + 0.3); // Convert to meters
-                weight = (lengthCheq / 1000) * (widthCheq / 1000) * (adjustedThickness / 1000) * (density/1000); // in kg
+                weight = (lengthCheq / 1000) * (widthCheq / 1000) * (adjustedThickness / 1000) * density; // in kg
                 break;
 
             case "Seamless Steel Pipes - Circular":
